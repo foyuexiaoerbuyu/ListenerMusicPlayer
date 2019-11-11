@@ -82,6 +82,7 @@ dependencies {
     compile 'com.sothree.slidinguppanel:library:3.3.1'
     //app theme engine
     compile('com.github.naman14:app-theme-engine:0.5.2@aar') {
+        exclude group: 'com.android.support', module: 'support-annotations'
         transitive = true
     }
 
@@ -106,7 +107,7 @@ andResGuard {
             "resources.arsc"
     ]
     sevenzip {
-        artifact = 'com.tencent.mm:SevenZip:1.2.0'
+        artifact = 'com.tencent.mm:SevenZip:1.2.3'
         //path = "/usr/local/bin/7za"
     }
 }

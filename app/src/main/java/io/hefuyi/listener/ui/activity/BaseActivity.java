@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -90,6 +91,12 @@ public class BaseActivity extends ATEActivity implements ServiceConnection {
     @Override
     public void onServiceDisconnected(ComponentName name) {
         mService = null;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("调试信息", "当前所在Activity  " + getClass().getSimpleName());
     }
 
     @Override
